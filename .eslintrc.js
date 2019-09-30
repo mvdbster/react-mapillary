@@ -1,4 +1,17 @@
 module.exports = {
+  parser: "babel-eslint",
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
+      modules: true,
+      experimentalObjectRestSpread: true
+    }
+  },
+  plugins: [
+    "react"
+  ],
   env: {
     browser: true,
     es6: true,
@@ -7,13 +20,6 @@ module.exports = {
   extends: [
     'airbnb',
   ],
-  parserOptions: {
-    sourceType: 'module',
-    ecmaVersion: 2018,
-    ecmaFeatures : {
-      jsx : true,
-    },
-  },
   rules: {
     'no-param-reassign': ['error', { props: false }],
     'no-return-assign': 0,
