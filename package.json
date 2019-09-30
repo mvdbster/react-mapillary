@@ -1,9 +1,9 @@
 {
-  "name": "mapillary-react",
+  "name": "react-mapillary",
   "version": "0.0.1",
   "description": "A react component for the mapillary-js lib",
-  "main": "dist/mapillary-react.js",
-  "module": "dist/mapillary-react.js",
+  "main": "dist/react-mapillary.js",
+  "module": "dist/react-mapillary.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
@@ -14,7 +14,7 @@
   "license": "Apache License - 2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexus37/mapillary-react"
+    "url": "https://github.com/alexus37/react-mapillary"
   },
   "peerDependencies": {
     "react": ">=16.10.1",

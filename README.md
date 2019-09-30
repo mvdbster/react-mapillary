@@ -1,4 +1,4 @@
-# mapillary-react
+# react-mapillary
 
 A simple [mapillaryJs](https://github.com/mapillary/mapillary-js) react component.
 
@@ -14,13 +14,13 @@ A simple [mapillaryJs](https://github.com/mapillary/mapillary-js) react componen
 ## Installing
 
 ```
-  $ npm install --save mapillary-react
+  $ npm install --save react-mapillary
 ```
 
 Then, just import to your React component:
 
 ```jsx
-  import { MapillaryViewer } from 'mapillary-react';
+  import { MapillaryViewer } from 'react-mapillary';
 ```
 
 ## Examples
