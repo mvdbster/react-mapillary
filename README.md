@@ -22,6 +22,23 @@ Then, just import to your React component:
 ```jsx
   import { MapillaryViewer } from 'react-mapillary';
 ```
+### Stylesheets
+
+Add the required stylesheets.
+```
+{/* The following line can be included in your src/index.js or App.js file*/}
+
+import 'mapillary-js/dist/mapillary.min.css';
+```
+
+or
+
+The simplest way is to include the latest styles from the CDN. A little more information about the benefits of using a CDN can be found here.
+
+```html
+  <link href='https://unpkg.com/mapillary-js@2.18.1/dist/mapillary.min.css' rel='stylesheet' />
+
+```
 
 ## Examples
 TBD

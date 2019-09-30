@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as Mapillary from 'mapillary-js';
-import 'mapillary-js/dist/mapillary.min.css';
 
 class MapillaryViewer extends Component {
   componentDidMount() {

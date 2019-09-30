@@ -1,9 +1,12 @@
 {
   "name": "react-mapillary",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "A react component for the mapillary-js lib",
   "main": "dist/react-mapillary.js",
   "module": "dist/react-mapillary.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
@@ -36,18 +39,15 @@
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.4",
-    "css-loader": "^3.2.0",
     "eslint": "^6.3.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-loader": "^3.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
-    "file-loader": "^4.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-test-renderer": "^15.6.2",
-    "style-loader": "^1.0.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^3.8.0",

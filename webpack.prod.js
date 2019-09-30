@@ -9,8 +9,8 @@ module.exports = merge(common, {
   entry: './src/index.jsx',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'mappilary-react.js',
-    library: 'mappilary-react',
+    filename: 'react-mapillary.js',
+    library: 'react-mapillary',
     libraryTarget: 'umd',
   },
 });
