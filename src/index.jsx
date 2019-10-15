@@ -47,9 +47,9 @@ class MapillaryViewer extends Component {
     this.viewer.moveToKey(this.props.imageKey);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.imageKey !== nextProps.imageKey) {
-      this.viewer.moveToKey(nextProps.imageKey);
+  componentDidUpdate(prevProps) {
+    if (this.props.imageKey !== prevProps.imageKey) {
+      this.viewer.moveToKey(this.props.imageKey);
     }
   }
 

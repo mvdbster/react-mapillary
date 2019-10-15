@@ -1,6 +1,6 @@
 # react-mapillary
 
-A simple [mapillaryJs](https://github.com/mapillary/mapillary-js) react component.
+A simple [mapillaryJs](https://github.com/mapillary/mapillary-js) react component. A demo can be found [here](https://alexus37.github.io/react-mapillary/)
 
 ## Table of Contents
 
