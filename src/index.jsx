@@ -26,12 +26,6 @@ class MapillaryViewer extends Component {
       }
     });
 
-    this.viewer.on(Mapillary.Viewer.bearingchanged, (event) => {
-      if (this.props.onBearingChanged) {
-        this.props.onBearingChanged(event);
-      }
-    });
-
     /* eslint-disable no-underscore-dangle */
     this.viewer._container.renderService.renderCamera$.subscribe(
       this.handleCameraChanges.bind(this),
