@@ -1,6 +1,6 @@
 # react-mapillary
 
-A simple [mapillaryJs](https://github.com/mapillary/mapillary-js) react component. A demo can be found [here](https://alexus37.github.io/react-mapillary/)
+A simple [mapillaryJs](https://github.com/mapillary/mapillary-js) react component.
 
 ## Table of Contents
 
@@ -41,10 +41,19 @@ The simplest way is to include the latest styles from the CDN. A little more inf
 ```
 
 ## Examples
-TBD
+A demo can be found [here](https://alexus37.github.io/react-mapillary/)
 
 ## Props
-TBD
+
+| Name          | Type           | Default | Description |
+| :------------ | :------------- | :------ | :---------- |
+| clientId*       | string |   | API key for the streetview. |
+| options   | object         |         | Optional configuration object specifing Viewer's and the components' initial setup. |
+| onNodeChanged       | function |   | Fired every time the viewer navigates to a new node. |
+| onBearingChanged   | function |   | Fired when the viewing direction of the camera changes. |
+| onTiltChanged | function |  | This event is fired when the viewer tilt changes. |
+| onFovChanged | function |  | This event is fired when the viewer FoV changes. Eg. when the user starts to zoom. |
+
 
 ## Issues
 
