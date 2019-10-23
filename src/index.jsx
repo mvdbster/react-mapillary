@@ -37,7 +37,9 @@ class MapillaryViewer extends Component {
 
     this.handleWindowResize = this.handleWindowResize.bind(this);
     window.addEventListener('resize', this.handleWindowResize);
-
+    if (this.props.filter) {
+      this.viewer.setFilter(this.props.filter);
+    }
     this.viewer.moveToKey(this.props.imageKey);
   }
 
@@ -98,10 +100,12 @@ MapillaryViewer.propTypes = {
   onTiltChanged: PropTypes.func,
   onFovChanged: PropTypes.func,
   options: PropTypes.object,
+  filter: PropTypes.array,
 };
 
 MapillaryViewer.defaultProps = {
   imageKey: '',
+  filter: null,
   onNodeChanged: () => { },
   onBearingChanged: () => { },
   onTiltChanged: () => { },
