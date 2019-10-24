@@ -1,6 +1,6 @@
 {
   "name": "react-mapillary",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A react component for the mapillary-js lib",
   "main": "dist/react-mapillary.js",
   "module": "dist/react-mapillary.js",

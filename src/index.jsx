@@ -8,6 +8,7 @@ class MapillaryViewer extends Component {
     this.state = {
       tilt: 90,
       fov: 55,
+      transition: false,
     };
   }
 
@@ -21,6 +22,7 @@ class MapillaryViewer extends Component {
     // Initialize with .moveToKey because passing the imageKey in the constructor
     // does not update the viewer until the user clicks explore
     this.viewer.on(Mapillary.Viewer.nodechanged, (event) => {
+      this.setState({ transition: true });
       if (this.props.onNodeChanged) {
         this.props.onNodeChanged(event);
       }
@@ -41,6 +43,7 @@ class MapillaryViewer extends Component {
       this.viewer.setFilter(this.props.filter);
     }
     this.viewer.moveToKey(this.props.imageKey);
+    this.viewer.on(Mapillary.Viewer.moveend, () => this.setState({ transition: false }));
   }
 
   componentDidUpdate(prevProps) {
@@ -58,7 +61,7 @@ class MapillaryViewer extends Component {
   }
 
   handleBearingChanges(bearing) {
-    if (this.props.onBearingChanged) {
+    if (this.props.onBearingChanged && !this.state.transition) {
       this.props.onBearingChanged(bearing);
     }
   }
@@ -66,7 +69,7 @@ class MapillaryViewer extends Component {
   handleCameraChanges(camera) {
     // subscripte to tilt changes
     const tilt = (camera.rotation.theta * 180) / Math.PI;
-    if (tilt !== this.state.tilt) {
+    if (tilt !== this.state.tilt && !this.state.transition) {
       if (this.props.onTiltChanged) {
         this.props.onTiltChanged(tilt);
       }
@@ -74,7 +77,7 @@ class MapillaryViewer extends Component {
     }
 
     const fov = camera.perspective.fov;
-    if (fov !== this.state.fov) {
+    if (fov !== this.state.fov && !this.state.transition) {
       if (this.props.onFovChanged) {
         this.props.onFovChanged(fov);
       }
