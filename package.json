@@ -1,6 +1,6 @@
 {
   "name": "react-mapillary",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A react component for the mapillary-js lib",
   "main": "dist/react-mapillary.js",
   "module": "dist/react-mapillary.js",
@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
     "@babel/plugin-transform-runtime": "^7.6.0",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
