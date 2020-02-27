@@ -70,7 +70,7 @@ class MapillaryViewer extends Component {
   }
 
   handleCameraChanges = (camera) => {
-    // subscripte to tilt changes
+    // subscribe to tilt changes
     const tilt = (camera.rotation.theta * 180) / Math.PI;
     if (tilt !== this.state.tilt && !this.state.transition) {
       if (this.props.onTiltChanged) {
